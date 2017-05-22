@@ -1,0 +1,19 @@
+# Default values for electrolyte.
+replicaCount: 2
+image:
+  repository: jefflaplante/electrolyte.work 
+  tag: latest
+  pullPolicy: IfNotPresent
+service:
+  name: nginx
+  type: ClusterIP
+  externalPort: 80
+  internalPort: 80
+resources:
+  limits:
+    cpu: 100m
+    memory: 50Mi
+  requests:
+    cpu: 50m
+    memory: 10Mi
+
